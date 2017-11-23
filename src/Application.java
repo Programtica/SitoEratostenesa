@@ -1,4 +1,4 @@
-//początek Application.java
+﻿//początek Application.java
 
 import java.util.Scanner;
 
@@ -8,24 +8,28 @@ public class Application
 	{
 		PrimeSieve primeSieve = new PrimeSieve();
 		
-		int numberLower = primeSieve.getNumberLower(); //przypisanie do zmiennej gettera - metody zwracaj�cej warto�ci
-		int numberUpper = primeSieve.getNumberUpper(); //przypisanie do zmiennej gettera - metody zwracaj�cej warto�ci
+		int numberLower = primeSieve.getNumberLower(); //przypisanie do zmiennej gettera - metody zwracającej wartości
+		int numberUpper = primeSieve.getNumberUpper(); //przypisanie do zmiennej gettera - metody zwracającej wartości
 		
-		System.out.println("Podaj dolny kraniec przedzia�u: ");
+		System.out.println("Podaj dolny kraniec przedziału: ");
 		
 		Scanner keyboardScanner = new Scanner(System.in);
 		
 		while (keyboardScanner.hasNextInt() == false)
-		{		
+		{	
+			System.out.println("\nBłędny typ danych!");
+			System.out.println("Spróbuj jeszcze raz!");
 			keyboardScanner.next(); 
 		}
 		
 		numberLower = keyboardScanner.nextInt();
 		
-		System.out.println("\nPodaj g�rny kraniec przedzia�u: ");
+		System.out.println("\nPodaj górny kraniec przedziału: ");
 		
 		while (keyboardScanner.hasNextInt() == false)
 		{			
+			System.out.println("\nBłędny typ danych!");
+			System.out.println("Spróbuj jeszcze raz!");
 			keyboardScanner.next();
 		}
 		
@@ -33,7 +37,7 @@ public class Application
 		
 		keyboardScanner.close();
 		
-		primeSieve.checkingPrimeNumbersInInterval(numberLower, numberUpper); //wywo�anie funkcji odpowiedzialnej za konstrukcj� liczb
+		primeSieve.checkingPrimeNumbersInInterval(numberLower, numberUpper); //wywołanie funkcji odpowiedzialnej za konstrukcję liczb
 	}
 }
 
