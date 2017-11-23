@@ -1,28 +1,28 @@
-//poczƒÖtek PrimeSieve.java
+//poczπtek PrimeSieve.java
 
 public class PrimeSieve 
 {
 	private int numberLower;
 	private int numberUpper;
 	
-	public int getNumberLower() //getter - metoda zwracajƒÖca warto≈õƒá
+	public int getNumberLower() //getter - metoda zwracajπca wartoúci
 	{
 		return this.numberLower;
 	}
 	
-	public int getNumberUpper() //getter - metoda zwracajƒÖca warto≈õƒá
+	public int getNumberUpper() //getter - metoda zwracajπca wartoúci
 	{
 		return this.numberUpper;
 	}
 	
-	//funkcja odpowiedzialna za konstrukcjƒô liczb pierwszych w przedziale
+	//funkcja odpowiedzialna za konstrukcjÍ liczb pierwszych w przedziale
 	
 	public void checkingPrimeNumbersInInterval(int numberLower, int numberUpper)
 	{
 		if(numberLower > numberUpper)
 		{
-			System.out.print("\nPrzedzia≈Ç ustalamy za niemalejƒÖcy!");
-			System.out.println("\nUruchom program ponownie i wprowad≈∫ poprawne dane!");
+			System.out.print("\nPrzedzia≥ ustalamy za niemalejπcy!");
+			System.out.println("\nUruchom program ponownie i wprowadü poprawne dane!");
 			return;
 		}
 		
@@ -30,10 +30,10 @@ public class PrimeSieve
 		{
 			if(numberUpper<=1)
 			{
-				System.out.println("\nNie ma wsrod nich liczb pierwszych!");
-				System.out.println("Przypomnƒô: liczba pierwsza to liczba wiƒôksza ni≈º 1, majƒÖca dwa dzielniki: "
-						+ "1 i samƒÖ siebie!");
-				System.out.println("Uruchom program ponownie i wprowad≈∫ nowe dane!");
+				System.out.println("\nNie ma wúrÛd nich liczb pierwszych!");
+				System.out.println("PrzypomnÍ: liczba pierwsza to liczba wiÍksza niø 1, majπca dwa dzielniki: "
+						+ "1 i samπ siebie!");
+				System.out.println("Uruchom program ponownie i wprowadü nowe dane!");
 				return;
 			}
 			
@@ -57,7 +57,12 @@ public class PrimeSieve
 				
 				System.out.println("\nLiczby pierwsze w przedziale: ");
 				
-				if(numberLower<2)
+				if(numberLower == numberUpper && numberLower % 2 == 0)
+				{
+					System.out.println("Brak takich liczb");
+				}
+				
+				else if(numberLower<2)
 				{
 					for(int i=2; i<=numberUpper; i++)
 					{
