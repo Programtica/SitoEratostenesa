@@ -1,28 +1,28 @@
-//poczπtek PrimeSieve.java
+//poczƒÖtek PrimeSieve.java
 
 public class PrimeSieve 
 {
 	private int numberLower;
 	private int numberUpper;
 	
-	public int getNumberLower() //getter - metoda zwracajπca wartoúci
+	public int getNumberLower() //getter - metoda zwracajƒÖca warto≈õƒá
 	{
 		return this.numberLower;
 	}
 	
-	public int getNumberUpper() //getter - metoda zwracajπca wartoúci
+	public int getNumberUpper() //getter - metoda zwracajƒÖca warto≈õƒá
 	{
 		return this.numberUpper;
 	}
 	
-	//funkcja odpowiedzialna za konstrukcjÍ liczb pierwszych w przedziale
+	//funkcja odpowiedzialna za konstrukcjƒô liczb pierwszych w przedziale
 	
 	public void checkingPrimeNumbersInInterval(int numberLower, int numberUpper)
 	{
 		if(numberLower > numberUpper)
 		{
-			System.out.print("\nPrzedzia≥Ç ustalamy za niemalejπcy!");
-			System.out.println("\nUruchom program ponownie i wprowadü poprawne dane!");
+			System.out.print("\nPrzedzia≈Ç ustalamy za niemalejƒÖcy!");
+			System.out.println("\nUruchom program ponownie i wprowad≈∫ poprawne dane!");
 			return;
 		}
 		
@@ -31,9 +31,9 @@ public class PrimeSieve
 			if(numberUpper<=1)
 			{
 				System.out.println("\nNie ma wsrod nich liczb pierwszych!");
-				System.out.println("PrzypomnÍ: liczba pierwsza to liczba wiÍksza niø 1, majπca dwa dzielniki: "
-						+ "1 i samπ siebie!");
-				System.out.println("Uruchom program ponownie i wprowadü nowe dane!");
+				System.out.println("Przypomnƒô: liczba pierwsza to liczba wiƒôksza ni≈º 1, majƒÖca dwa dzielniki: "
+						+ "1 i samƒÖ siebie!");
+				System.out.println("Uruchom program ponownie i wprowad≈∫ nowe dane!");
 				return;
 			}
 			
@@ -57,12 +57,7 @@ public class PrimeSieve
 				
 				System.out.println("\nLiczby pierwsze w przedziale: ");
 				
-				if(numberLower == numberUpper && numberLower % 2 == 0)
-				{
-					System.out.println("Brak takich liczb");
-				}
-				
-				else if(numberLower<2)
+				if(numberLower<2)
 				{
 					for(int i=2; i<=numberUpper; i++)
 					{
