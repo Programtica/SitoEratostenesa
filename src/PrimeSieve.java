@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-﻿//początek PrimeSieve.java
-=======
 //początek PrimeSieve.java
->>>>>>> origin/master
 
 public class PrimeSieve 
 {
@@ -59,18 +55,7 @@ public class PrimeSieve
 					}
 				}
 				
-<<<<<<< HEAD
 				if(numberLower<=2)
-=======
-				System.out.println("\nLiczby pierwsze w przedziale: ");
-				
-				if(numberLower != 2 && numberLower == numberUpper && numberLower % 2 == 0)
-				{
-					System.out.println("Brak takich liczb");
-				}
-				
-				else if(numberLower<2)
->>>>>>> origin/master
 				{
 					System.out.println("\nLiczby pierwsze w przedziale: ");
 					for(int i=2; i<=numberUpper; i++)
