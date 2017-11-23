@@ -1,4 +1,4 @@
-﻿//początek Application.java
+//początek Application.java
 
 import java.util.Scanner;
 
@@ -11,7 +11,7 @@ public class Application
 		int numberLower = primeSieve.getNumberLower(); //przypisanie do zmiennej gettera - metody zwracającej wartości
 		int numberUpper = primeSieve.getNumberUpper(); //przypisanie do zmiennej gettera - metody zwracającej wartości
 		
-		System.out.println("Podaj dolny kraniec przedziału: ");
+		System.out.print("Podaj dolny kraniec przedziału: ");
 		
 		Scanner keyboardScanner = new Scanner(System.in);
 		
@@ -24,7 +24,7 @@ public class Application
 		
 		numberLower = keyboardScanner.nextInt();
 		
-		System.out.println("\nPodaj górny kraniec przedziału: ");
+		System.out.print("\nPodaj górny kraniec przedziału: ");
 		
 		while (keyboardScanner.hasNextInt() == false)
 		{			
