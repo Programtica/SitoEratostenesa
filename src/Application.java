@@ -1,4 +1,4 @@
-//pocz¹tek Application.java
+//poczÄ…tek Application.java
 
 import java.util.Scanner;
 
@@ -8,10 +8,10 @@ public class Application
 	{
 		PrimeSieve primeSieve = new PrimeSieve();
 		
-		int numberLower = primeSieve.getNumberLower(); //przypisanie do zmiennej gettera - metody zwracaj¹cej wartoœci
-		int numberUpper = primeSieve.getNumberUpper(); //przypisanie do zmiennej gettera - metody zwracaj¹cej wartoœci
+		int numberLower = primeSieve.getNumberLower(); //przypisanie do zmiennej gettera - metody zwracajÄ…cej wartoÅ›Ä‡
+		int numberUpper = primeSieve.getNumberUpper(); //przypisanie do zmiennej gettera - metody zwracajÄ…cej wartoÅ›Ä‡
 		
-		System.out.println("Podaj dolny kraniec przedzia³u: ");
+		System.out.println("Podaj dolny kraniec przedziaÅ‚u: ");
 		
 		Scanner keyboardScanner = new Scanner(System.in);
 		
@@ -22,7 +22,7 @@ public class Application
 		
 		numberLower = keyboardScanner.nextInt();
 		
-		System.out.println("\nPodaj górny kraniec przedzia³u: ");
+		System.out.println("\nPodaj gÃ³rny kraniec przedziaÅ‚u: ");
 		
 		while (keyboardScanner.hasNextInt() == false)
 		{			
@@ -33,7 +33,7 @@ public class Application
 		
 		keyboardScanner.close();
 		
-		primeSieve.checkingPrimeNumbersInInterval(numberLower, numberUpper); //wywo³anie funkcji odpowiedzialnej za konstrukcjê liczb
+		primeSieve.checkingPrimeNumbersInInterval(numberLower, numberUpper); //wywoÅ‚anie funkcji odpowiedzialnej za konstrukcjÄ™ liczb
 	}
 }
 
