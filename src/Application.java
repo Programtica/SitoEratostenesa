@@ -1,4 +1,4 @@
-//poczÄ…tek Application.java
+//początek Application.java
 
 import java.util.Scanner;
 
