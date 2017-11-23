@@ -1,0 +1,50 @@
+(pl)
+
+LICZBY PIERWSZE W OKREŚLONYM PRZEDZIALE (SITO ERATOSTENESA).
+ 
+ Zrobione przez: KONSTANTY DMOCHOWSKI (PROGRAMTICA),
+ Stworzone: 23 XI 2017 - dla dobrej koleżanki W. i nie tylko.
+
+ Można używać w edukacyjnych celach, z ewentualnymi modyfikacjami.
+   
+ Plik: PrimeSieve.java -> konstrukcja liczb pierwszych w danym przedziale
+ Plik: Application.java -> główna funkcja programu wraz z wprowadzeniem danych na wejściu
+  
+Skrócone oznaczenia:
+- public class PrimeSieve - ważna klasa programu, odpowiedzialna za uzyskanie
+    liczb pierwszych w przedziale (publiczna)
+    
+- public class Application - główna klasa programu, odpowiedzialna za sterowanie wejściem z klawiaturą i
+   uzyskaniem pożądanego przez nas rezultatu (publiczna).
+    
+- numberLower - zmienna prywatna, dolna graniczna liczba z przedziału (całkowita)
+   
+- numberUpper - zmienna prywatna, górna graniczna liczba z przedziału (całkowita)
+  
+- [] check - dynamiczna tablica odnotowująca, czy liczba jest pierwsza (prawda, fałsz)
+   
+- Math.sqrt(numberUpper) - pierwiastek górnej liczby z przedziału
+
+- import java.util.Scanner - użycie klasy w Javie odpowiadającej za pobranie informacji z klawiatury
+     przy użyciu Scannera.
+     
+- Scanner nazwaScannera = new Scanner(System.in); - wprowadzenie do działania klawiatury, 
+ od teraz będziemy mogli jej używać
+     
+- while (nazwaScannera.hasNextInt() == false) - sprawdzanie, czy aby na pewno wpisana dana z klawiatury to int.
+     
+- nazwaScannera.next(); - pobiera nową daną z klawiatury, gdyby oryginalna okazała się nie pożądanym typem danych (np. tekstem lub liczbą zmiennoprzecinkową)
+			 
+- nazwaScannera.close(); - zamykanie interfejsu wyjścia - dane od teraz nie będą wpisywane z klawiatury.
+   
+- naszaZmienna = nazwaScannera.nextInt(); - właściwe określenie, czym ma być nasza zmienna z wejścia (liczba całkowita)
+     
+- public class Application - główna klasa programu, odpowiedzialna za sterowanie wejściem z klawiaturą i
+   uzyskaniem pożądanego przez nas rezultatu (publiczna).
+   
+- numberLower - zmienna prywatna, dolna graniczna liczba z przedziału (całkowita)
+   
+- numberUpper - górna liczba z przedziału (całkowita).
+
+WPROWADZONO ZABEZPIECZENIA PRZED TEKSTEM, 
+LICZBAMI ZMIENNOPRZECINKOWYMI I NIEWŁAŚCIWYMI DANYMI.
