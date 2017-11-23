@@ -8,8 +8,8 @@ public class Application
 	{
 		PrimeSieve primeSieve = new PrimeSieve();
 		
-		int numberLower = primeSieve.getNumberLower(); //przypisanie do zmiennej gettera - metody zwracającej wartoœci
-		int numberUpper = primeSieve.getNumberUpper(); //przypisanie do zmiennej gettera - metody zwracającej wartoœci
+		int numberLower = primeSieve.getNumberLower(); //przypisanie do zmiennej gettera - metody zwracającej wartości
+		int numberUpper = primeSieve.getNumberUpper(); //przypisanie do zmiennej gettera - metody zwracającej wartości
 		
 		System.out.println("Podaj dolny kraniec przedziału: ");
 		
