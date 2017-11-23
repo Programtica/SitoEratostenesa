@@ -57,11 +57,13 @@ public class PrimeSieve
 				
 				if(numberLower<=2)
 				{
-					System.out.println("\nLiczby pierwsze w przedziale: ");
+					System.out.print("\nLiczby pierwsze w przedziale: ");
 					for(int i=2; i<=numberUpper; i++)
 					{
 						if(check[i]==false)
+						{
 							System.out.print(i + " ");
+						}
 					}
 				}
 					

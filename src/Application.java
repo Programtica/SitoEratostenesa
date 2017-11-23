@@ -19,7 +19,7 @@ public class Application
 		{	
 			System.out.println("\nBłędny typ danych!");
 			System.out.println("Spróbuj jeszcze raz!");
-			keyboardScanner.next(); 
+			keyboardScanner.nextLine();
 		}
 		
 		numberLower = keyboardScanner.nextInt();
@@ -30,7 +30,7 @@ public class Application
 		{			
 			System.out.println("\nBłędny typ danych!");
 			System.out.println("Spróbuj jeszcze raz!");
-			keyboardScanner.next();
+			keyboardScanner.nextLine();
 		}
 		
 		numberUpper = keyboardScanner.nextInt();
