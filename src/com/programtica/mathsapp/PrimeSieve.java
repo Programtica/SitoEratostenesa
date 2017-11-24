@@ -55,8 +55,8 @@ public class PrimeSieve
 			
 		else
 		{
-			/* dynamiczna pamięć! (u mnie dało się od przedział zrobić do 5848 włącznie, 
-			tak nie musi być) - zależne to od maszyny */
+			/* dynamiczna pamięć! (u mnie dało się od przedział zrobić do 5848 włącznie w konsoli
+			 mojego IDE - Eclipse, tak nie musi być) */
 			
 			boolean[] check = new boolean [numberUpper+1];
 		   
