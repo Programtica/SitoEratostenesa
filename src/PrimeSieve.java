@@ -5,6 +5,12 @@ public class PrimeSieve
 	private int numberLower;
 	private int numberUpper;
 	
+	public PrimeSieve(int numberLower, int numberUpper) //konstruktor klasy PrimeSieve ustawiający wartości
+	{
+		this.numberLower = numberLower;
+		this.numberLower = numberUpper;
+	}
+	
 	public int getNumberLower() //getter - metoda zwracająca wartości
 	{
 		return this.numberLower;
@@ -13,6 +19,16 @@ public class PrimeSieve
 	public int getNumberUpper() //getter - metoda zwracająca wartości
 	{
 		return this.numberUpper;
+	}
+	
+	public void setNumberLower(int numberLower) //setter - metoda ustawiająca wartości
+	{
+	    this.numberLower = numberLower;
+	}
+	
+	public void setNumberUpper(int numberUpper) //setter - metoda ustawiająca wartości
+	{
+		this.numberUpper = numberUpper;
 	}
 	
 	//funkcja odpowiedzialna za konstrukcję liczb pierwszych w przedziale
@@ -26,63 +42,60 @@ public class PrimeSieve
 			return;
 		}
 		
+		if(numberUpper<=1)
+		{
+			System.out.println("\nNie ma wśród nich liczb pierwszych!");
+			System.out.println("Przypomnę: liczba pierwsza to liczba większa niż 1, mająca dwa dzielniki: "
+					+ "1 i samą siebie!");
+			System.out.println("Uruchom program ponownie i wprowadź nowe dane!");
+			return;
+		}
+			
 		else
 		{
-			if(numberUpper<=1)
+			boolean[] check = new boolean [numberUpper+1];
+		   
+			for(int i=2; i<=numberUpper; ++i)
 			{
-				System.out.println("\nNie ma wśród nich liczb pierwszych!");
-				System.out.println("Przypomnę: liczba pierwsza to liczba większa niż 1, mająca dwa dzielniki: "
-						+ "1 i samą siebie!");
-				System.out.println("Uruchom program ponownie i wprowadź nowe dane!");
-				return;
+				check[i] = false;
+			}
+		
+			for(int i=2; i<=Math.sqrt(numberUpper); ++i)
+			{
+				if(check[i]==false)
+				{
+					for(int j=i*i; j<=numberUpper; j+=i)
+						check[j] = true;
+				}
 			}
 			
-		   else
-		   {
-				boolean[] check = new boolean [numberUpper+1];
-			   
-				for(int i=2; i<=numberUpper; i++)
-				{
-					check[i] = false;
-				}
-			
-				for(int i=2; i<=Math.sqrt(numberUpper); i++)
+			if(numberLower<=2)
+			{
+				System.out.print("\nLiczby pierwsze w przedziale: ");
+				for(int i=2; i<=numberUpper; ++i)
 				{
 					if(check[i]==false)
 					{
-						for(int j=i*i; j<=numberUpper; j+=i)
-							check[j] = true;
+						System.out.print(i + " ");
 					}
 				}
+			}
 				
-				if(numberLower<=2)
+			else
+			{
+				System.out.print("\nLiczby pierwsze w przedziale: ");
+				for(int i=numberLower; i<=numberUpper; ++i)
 				{
-					System.out.print("\nLiczby pierwsze w przedziale: ");
-					for(int i=2; i<=numberUpper; i++)
+					if(check[i]==false)
 					{
-						if(check[i]==false)
-						{
-							System.out.print(i + " ");
-						}
+						System.out.print(i + " ");
 					}
-				}
 					
-				else
-				{
-					System.out.print("\nLiczby pierwsze w przedziale: ");
-					for(int i=numberLower; i<=numberUpper; i++)
+					else if(numberLower % i == 0 && numberLower == numberUpper)
 					{
-						if(check[i]==false)
-						{
-							System.out.print(i + " ");
-						}
-						
-						else if(numberLower % i == 0 && numberLower == numberUpper)
-						{
-							System.out.println("\nObie liczby są te same. "
-									+ "I na dodatek obojętnie która z nich ma więcej niż dwa dzielniki.");
-						}			
-					}
+						System.out.println("\nObie liczby są te same. "
+								+ "I na dodatek obojętnie która z nich ma więcej niż dwa dzielniki.");
+					}			
 				}
 			}
 		}

@@ -4,39 +4,34 @@ import java.util.Scanner;
 
 public class Application
 {	
+	private static Scanner keyboardScanner = new Scanner(System.in);
+	
+	/*funkcja która obsługuje to co się dzieje na wejściu, statyczna ponieważ nie jest powiązana
+	 z obiektem, a z klasą, prywatna w celu zmniejszenia ilości kodu */
+	
+	private static int enterNextInt()
+	{
+		 while (keyboardScanner.hasNextInt()==false) 
+		 {
+	            System.out.println("\nBłędny typ danych!\nSpróbuj jeszcze raz!");
+	            keyboardScanner.nextLine();
+	            
+	            System.out.print("\nWpisz jeszcze raz Twoją daną: ");
+		 }
+		 
+		 return keyboardScanner.nextInt();
+	}
+	
 	public static void main(String[] args) 
 	{
-		PrimeSieve primeSieve = new PrimeSieve();
-		
-		int numberLower = primeSieve.getNumberLower(); //przypisanie do zmiennej gettera - metody zwracającej wartości
-		int numberUpper = primeSieve.getNumberUpper(); //przypisanie do zmiennej gettera - metody zwracającej wartości
-		
 		System.out.print("Podaj dolny kraniec przedziału: ");
-		
-		Scanner keyboardScanner = new Scanner(System.in);
-		
-		while (keyboardScanner.hasNextInt() == false)
-		{	
-			System.out.println("\nBłędny typ danych!");
-			System.out.println("Spróbuj jeszcze raz!");
-			keyboardScanner.nextLine();
-		}
-		
-		numberLower = keyboardScanner.nextInt();
-		
+		int numberLower = enterNextInt();
 		System.out.print("\nPodaj górny kraniec przedziału: ");
-		
-		while (keyboardScanner.hasNextInt() == false)
-		{			
-			System.out.println("\nBłędny typ danych!");
-			System.out.println("Spróbuj jeszcze raz!");
-			keyboardScanner.nextLine();
-		}
-		
-		numberUpper = keyboardScanner.nextInt();
+		int numberUpper = enterNextInt();
 		
 		keyboardScanner.close();
 		
+		PrimeSieve primeSieve = new PrimeSieve(numberLower, numberUpper); //konstruktor klasy PrimeSieve, ustawia wartości
 		primeSieve.checkingPrimeNumbersInInterval(numberLower, numberUpper); //wywołanie funkcji odpowiedzialnej za konstrukcję liczb
 	}
 }

@@ -41,10 +41,6 @@ Skrócone oznaczenia:
      
 - public class Application - główna klasa programu, odpowiedzialna za sterowanie wejściem z klawiaturą i
    uzyskaniem pożądanego przez nas rezultatu (publiczna).
-   
-- numberLower - zmienna prywatna, dolna graniczna liczba z przedziału (całkowita)
-   
-- numberUpper - górna liczba z przedziału (całkowita).
 
 WPROWADZONO ZABEZPIECZENIA PRZED TEKSTEM, 
 LICZBAMI ZMIENNOPRZECINKOWYMI I NIEWŁAŚCIWYMI DANYMI.
