@@ -60,7 +60,7 @@ public class PrimeSieve
 				check[i] = false;
 			}
 		
-			for(int i=2; i<=Math.sqrt(numberUpper); ++i)
+			for(int i=2; i<=Math.sqrt(numberUpper); ++i) //wielokrotności są do pierwiastka z górnej liczby w przedziale
 			{
 				if(check[i]==false)
 				{
@@ -69,7 +69,7 @@ public class PrimeSieve
 				}
 			}
 			
-			if(numberLower<=2)
+			if(numberLower<=2) //wyświetlanie liczb pierwszych od 2, gdy przedział jest np. [-50,20]
 			{
 				System.out.print("\nLiczby pierwsze w przedziale: ");
 				for(int i=2; i<=numberUpper; ++i)
@@ -81,7 +81,7 @@ public class PrimeSieve
 				}
 			}
 				
-			else
+			else ////wyświetlanie liczb pierwszych, gdy przedział jest np. [2,100]
 			{
 				System.out.print("\nLiczby pierwsze w przedziale: ");
 				for(int i=numberLower; i<=numberUpper; ++i)
@@ -91,7 +91,7 @@ public class PrimeSieve
 						System.out.print(i + " ");
 					}
 					
-					else if(numberLower % i == 0 && numberLower == numberUpper)
+					else if(numberLower % i == 0 && numberLower == numberUpper) //np. 4,6,8,9,12...
 					{
 						System.out.println("\nObie liczby są te same. "
 								+ "I na dodatek obojętnie która z nich ma więcej niż dwa dzielniki.");
