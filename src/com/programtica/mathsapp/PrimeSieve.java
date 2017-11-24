@@ -1,6 +1,6 @@
 //początek PrimeSieve.java
 
-package com.programtica.fullyapplication; //pakiet w celu lepszej organizacji pracy
+package com.programtica.mathsapp; //pakiet w celu lepszej organizacji pracy
 
 public class PrimeSieve 
 {
