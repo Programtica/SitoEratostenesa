@@ -38,9 +38,6 @@ Skrócone oznaczenia:
 - nazwaScannera.close(); - zamykanie interfejsu wyjścia - dane od teraz nie będą wpisywane z klawiatury.
    
 - naszaZmienna = nazwaScannera.nextInt(); - właściwe określenie, czym ma być nasza zmienna z wejścia (liczba całkowita)
-     
-- public class Application - główna klasa programu, odpowiedzialna za sterowanie wejściem z klawiaturą i
-   uzyskaniem pożądanego przez nas rezultatu (publiczna).
 
 WPROWADZONO ZABEZPIECZENIA PRZED TEKSTEM, 
 LICZBAMI ZMIENNOPRZECINKOWYMI I NIEWŁAŚCIWYMI DANYMI.
