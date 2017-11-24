@@ -98,8 +98,9 @@ public class PrimeSieve
 					
 					else if(numberLower % i == 0 && numberLower == numberUpper) //np. 4,6,8,9,12...
 					{
-						System.out.println("\nObie liczby są te same. "
-								+ "I na dodatek obojętnie która z nich ma więcej niż dwa dzielniki.");
+						System.out.print("Te liczby są takie same. "
+								+ "\nAle to NIE są liczby pierwsze - tylko ZŁOŻONE."
+								+ "\nCzyli obojętnie która z nich ma więcej niż dwa dzielniki.");
 					}			
 				}
 			}
